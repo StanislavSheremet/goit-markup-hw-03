@@ -25,12 +25,17 @@ html {
   --white-title: #ffffff;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 header {
   border-bottom: 1px solid #ececec;
 }
 
 body {
-  margin: 0;
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
@@ -39,9 +44,10 @@ body {
 .main {
   align-items: center;
   display: flex;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -49,7 +55,7 @@ body {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 94px;
@@ -57,14 +63,10 @@ body {
 }
 
 .hero-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  padding-top: 200px;
   margin-left: auto;
   margin-right: auto;
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -77,6 +79,9 @@ ul {
 
 /*Лого студии*/
 .primary-logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+
   color: #000000;
   text-decoration: none;
   font-family: Raleway, sans-serif;
@@ -94,6 +99,11 @@ ul {
 }
 
 /*Ссылки навигации*/
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
 .site-nav {
   margin-left: 86px;
   display: flex;
@@ -123,7 +133,6 @@ ul {
 }
 
 .site-contacts {
-  margin-left: auto;
   display: flex;
 }
 
@@ -132,9 +141,6 @@ ul {
 }
 
 .contacts {
-  padding-top: 32px;
-  padding-bottom: 32px;
-
   text-decoration: none;
   color: var(--primary-text-color);
   font-weight: 500;
@@ -149,6 +155,12 @@ ul {
 }
 
 .hero-title {
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+
   margin-top: 0;
   margin-bottom: 46px;
   /* color: #ffffff; */
@@ -160,8 +172,14 @@ ul {
 }
 
 /*Кнопки "Заказать услугу" и "Подписаться"*/
+.order {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: fit-content;
+}
+
 .button {
-  min-width: 200px;
   padding: 10px 32px;
   border-radius: 4px;
 
@@ -178,9 +196,14 @@ ul {
 
 /*Преимущества работы с нами*/
 .hidden-title {
-  margin: 0;
-  height: 0;
-  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .advantage-list {
@@ -193,7 +216,7 @@ ul {
 }
 
 .advantage-item {
-  width: 278px;
+  width: 270px;
 }
 
 .advantage-logo {
@@ -225,11 +248,13 @@ ul {
 
 /* Чем мы занимаемся */
 .production-container {
+  border-top: 1px solid #ececec;
   margin-left: auto;
   margin-right: auto;
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 94px;
   padding-bottom: 94px;
 }
 
@@ -277,6 +302,14 @@ ul {
   border-radius: 4px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.team-data {
+  padding-top: 30px;
+  padding-right: 44px;
+  padding-left: 44px;
+  padding-bottom: 36px;
 }
 
 .team-item:not(:last-child) {
@@ -286,8 +319,7 @@ ul {
 .social-links {
   display: flex;
   justify-content: space-evenly;
-  margin-top: 28px;
-  padding-bottom: 36px;
+  margin-top: 30px;
 }
 
 .team-section {
@@ -295,7 +327,7 @@ ul {
 }
 
 .development-title {
-  margin-top: 30px;
+  margin-top: 0;
   margin-bottom: 0;
 
   color: var(--title-color);
@@ -328,6 +360,8 @@ ul {
 }
 .clients-item {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 175px;
   height: 90px;
   border: 1px solid #afb1b8;
@@ -342,7 +376,7 @@ ul {
 .footer-container {
   margin-left: auto;
   margin-right: auto;
-  width: 1230px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 48px;
@@ -353,14 +387,16 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .logo-address {
-  margin-right: 179px;
+  margin-right: 69px;
 }
 
 .add-social {
-  margin-right: 114px;
+  margin-right: 94px;
 }
 
 .add-network {
@@ -422,7 +458,8 @@ ul {
 
 /* Тестовая форма регистра */
 .test-input {
-  width: 270px;
+  margin-right: 12px;
+  width: 358px;
   height: 50px;
   background-color: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -432,7 +469,7 @@ ul {
 }
 
 .end-footer {
-  margin-top: 68px;
+  margin-top: 18px;
   margin-bottom: 0;
 
   color: rgba(255, 255, 255, 0.4);
@@ -489,9 +526,8 @@ ul {
 
 /* Заголовки работ */
 .filter-title {
-  margin-top: 20px;
-  margin-bottom: 0;
-  margin-left: 24px;
+  margin-top: 0px;
+  margin-bottom: 4px;
 
   color: var(--title-color);
   font-weight: 700;
@@ -501,9 +537,8 @@ ul {
 }
 
 .categories-name {
-  margin-top: 4px;
+  margin-top: 0;
   margin-bottom: 0;
-  margin-left: 24px;
 
   font-weight: 400;
   font-size: 16px;
@@ -516,12 +551,25 @@ ul {
   justify-content: space-between;
 }
 
+.item-card {
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
 .work-item {
-  border: 1px solid #eeeeee;
   border-radius: 5px;
+  overflow: hidden;
   margin-right: 30px;
   margin-bottom: 30px;
-  width: 380px;
+  width: 370px;
+}
+
+.item-picture {
+  display: block;
 }
 
 .work-item:hover {
